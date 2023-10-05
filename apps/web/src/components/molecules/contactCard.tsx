@@ -3,6 +3,7 @@ import { SystemStyleObject, Theme } from '@mui/system';
 
 import { Card } from '@components/atoms';
 import { IContact } from 'react-coding-interview-shared/models';
+import { Contact } from '@components/Contact';
 
 export interface IContactCardProps {
   person: IContact;
@@ -18,9 +19,10 @@ export const ContactCard: React.FC<IContactCardProps> = ({
       <Box display="flex" flexDirection="column" alignItems="center">
         <Avatar />
         <Box textAlign="center" mt={2}>
-          <Typography variant="subtitle1" lineHeight="1rem">
+          {/* <Typography variant="subtitle1" lineHeight="1rem">
             {name}
-          </Typography>
+          </Typography> */}
+          <Contact name={name} />
           <Typography variant="caption" color="text.secondary">
             {email}
           </Typography>
